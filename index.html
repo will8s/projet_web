@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie Info</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body >
+    <div class="header">
+      <div class="header-titre">
+        <a class="titre" href="index.html">MOVIE SEARCH</a>
+      </div>
+    
+      <div class="header-scearch">
+        <form id="searchForm">
+          <input type="text" class="form-control" id="searchText" onchange="supprimer()" placeholder="Search Movie....">
+        </form>
+      </div>
+    </div>
+
+    <div class="main" id="main" >
+      <div class="acceuil" id="accueil" style="text-align: center;padding-top: 150px;">
+        accueil
+        <div class="img-flout">
+          <img src="css/img-font.png" alt="">
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="movies"></div>
+      </div>
+    </div>
+     
+    <footer>
+      <div class="presentation">
+        presentation projet
+      </div>
+
+      <div class="icon-social">
+        <div id="icon">
+          
+        </div>
+        <div id="icon">
+          
+        </div>
+        <div id="icon">
+          
+        </div>
+      </div>
+    </footer>
+  </body>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
+
+<script>
+  function supprimer(){
+     /*On veut supprimer notre titre, on commence donc
+     *par y accéder*/
+    var top = document.getElementById("main");
+    var nested = document.getElementById("accueil");
+    var garbage = top.removeChild(nested);
+
+  }
+   
+</script>
